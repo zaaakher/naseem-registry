@@ -1,3 +1,6 @@
+"use client";
+
+import { Languages } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -6,9 +9,8 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Languages } from "lucide-react";
 
-export default function LanguageSwitcher({
+export function LanguageSwitcher({
   languages = [
     { label: "en", value: "en" },
     { label: "ar", value: "ar" },
