@@ -35,6 +35,7 @@
       "type": "registry:component",
       "title": "Theme Switcher",
       "description": "A theme switcher component",
+      "dependencies": ["next-themes"],
       "registryDependencies": ["button", "dropdown-menu"],
       "files": [
         {
