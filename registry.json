@@ -49,6 +49,7 @@
       "type": "registry:component",
       "title": "Language Switcher",
       "description": "A language switcher component",
+      "dependencies": ["lucide-react"],
       "registryDependencies": ["button", "dropdown-menu"],
       "files": [
         {
