@@ -1,7 +1,10 @@
+"use client";
+
 import * as React from "react";
 import { RegistrySection } from "@/components/registry-section";
-import { LanguageSwitcherWrapper } from "@/components/client-wrapper";
-import { ThemeSwitcherWrapper } from "@/components/theme-switcher-wrapper";
+import { AppStores } from "@/registry/buttons/app-stores";
+import { LanguageSwitcher } from "@/registry/buttons/language-switcher";
+import { ThemeSwitcher } from "@/registry/buttons/theme-switcher";
 
 export default function Home() {
   return (
@@ -14,13 +17,36 @@ export default function Home() {
       </header>
       <main className="flex flex-col flex-1 gap-8">
         <RegistrySection title="Theme Switcher" registryName="theme-switcher">
-          <ThemeSwitcherWrapper />
+          <ThemeSwitcher />
         </RegistrySection>
         <RegistrySection
           title="Language Switcher"
           registryName="language-switcher"
         >
-          <LanguageSwitcherWrapper />
+          <LanguageSwitcher
+            languages={[
+              { label: "English", value: "en" },
+              { label: "عربي", value: "ar" },
+            ]}
+            onLanguageChange={() => {}}
+          />
+        </RegistrySection>
+
+        <RegistrySection title="App Stores" registryName="app-stores">
+          <div>
+            <AppStores
+              store="apple"
+              onClick={() => {
+                console.log("apple");
+              }}
+            />
+            <AppStores
+              store="google"
+              onClick={() => {
+                console.log("google");
+              }}
+            />
+          </div>
         </RegistrySection>
       </main>
     </div>
