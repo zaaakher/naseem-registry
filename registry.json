@@ -35,7 +35,7 @@
       "type": "registry:component",
       "title": "Theme Switcher",
       "description": "A theme switcher component",
-      "dependencies": ["next-themes"],
+      "dependencies": ["next-themes", "lucide-react"],
       "registryDependencies": ["button", "dropdown-menu"],
       "files": [
         {
