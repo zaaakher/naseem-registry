@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "theme-switcher",
+  "type": "registry:component",
+  "title": "Theme Switcher",
+  "description": "A theme switcher component",
+  "registryDependencies": [
+    "button",
+    "dropdown-menu"
+  ],
+  "files": [
+    {
+      "path": "registry/buttons/theme-switcher.tsx",
+      "content": "import { useTheme } from \"next-themes\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  DropdownMenu,\n  DropdownMenuContent,\n  DropdownMenuRadioGroup,\n  DropdownMenuRadioItem,\n  DropdownMenuTrigger,\n} from \"@/components/ui/dropdown-menu\";\nimport { Moon, Sun } from \"lucide-react\";\n\nexport default function ThemeSwitcher() {\n  const { theme, themes, setTheme, resolvedTheme } = useTheme();\n\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\" size=\"icon\">\n          {resolvedTheme === \"dark\" ? <Moon /> : <Sun />}\n        </Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuRadioGroup\n          value={theme === \"dark\" ? \"dark\" : \"light\"}\n          onValueChange={(e) => {\n            setTheme(e);\n          }}\n        >\n          {themes.map((theme) => (\n            <DropdownMenuRadioItem key={theme} value={theme}>\n              {theme}\n            </DropdownMenuRadioItem>\n          ))}\n        </DropdownMenuRadioGroup>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}\n",
+      "type": "registry:component"
+    }
+  ]
+}

@@ -31,6 +31,32 @@
       ]
     },
     {
+      "name": "theme-switcher",
+      "type": "registry:component",
+      "title": "Theme Switcher",
+      "description": "A theme switcher component",
+      "registryDependencies": ["button", "dropdown-menu"],
+      "files": [
+        {
+          "path": "registry/buttons/theme-switcher.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "language-switcher",
+      "type": "registry:component",
+      "title": "Language Switcher",
+      "description": "A language switcher component",
+      "registryDependencies": ["button", "dropdown-menu"],
+      "files": [
+        {
+          "path": "registry/buttons/language-switcher.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "complex-component",
       "type": "registry:component",
       "title": "Complex Component",
