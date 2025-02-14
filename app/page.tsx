@@ -1,10 +1,7 @@
 import * as React from "react";
-import { HelloWorld } from "@/registry/hello-world/hello-world";
-import { ExampleForm } from "@/registry/example-form/example-form";
-import PokemonPage from "@/registry/complex-component/page";
-import { ThemeSwitcher } from "@/registry/buttons/theme-switcher";
 import { RegistrySection } from "@/components/registry-section";
-import { LanguageSwitcher } from "@/registry/buttons/language-switcher";
+import { LanguageSwitcherWrapper } from "@/components/client-wrapper";
+import { ThemeSwitcherWrapper } from "@/components/theme-switcher-wrapper";
 
 export default function Home() {
   return (
@@ -16,43 +13,14 @@ export default function Home() {
         </p>
       </header>
       <main className="flex flex-col flex-1 gap-8">
-        <RegistrySection
-          title="A simple hello world component"
-          registryName="hello-world"
-        >
-          <HelloWorld />
-        </RegistrySection>
-
         <RegistrySection title="Theme Switcher" registryName="theme-switcher">
-          <ThemeSwitcher />
+          <ThemeSwitcherWrapper />
         </RegistrySection>
         <RegistrySection
           title="Language Switcher"
           registryName="language-switcher"
         >
-          <LanguageSwitcher
-            languages={[
-              { label: "English", value: "en" },
-              { label: "عربي", value: "ar" },
-            ]}
-            // onLanguageChange={() => {
-            //   console.log("language changed");
-            // }}
-          />
-        </RegistrySection>
-
-        <RegistrySection
-          title="A contact form with Zod validation."
-          registryName="example-form"
-        >
-          <ExampleForm />
-        </RegistrySection>
-
-        <RegistrySection
-          title="A complex component showing hooks, libs and components."
-          registryName="complex-component"
-        >
-          <PokemonPage />
+          <LanguageSwitcherWrapper />
         </RegistrySection>
       </main>
     </div>

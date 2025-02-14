@@ -15,7 +15,7 @@ export function LanguageSwitcher({
     { label: "en", value: "en" },
     { label: "ar", value: "ar" },
   ],
-  onLanguageChange,
+  onLanguageChange = () => {},
 }: {
   languages?: { label: string; value: string }[];
   onLanguageChange: (language: string) => void;
