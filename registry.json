@@ -42,6 +42,19 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:component",
+      "title": "Alert",
+      "description": "A component for displaying alerts",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/alert/alert.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }

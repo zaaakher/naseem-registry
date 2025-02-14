@@ -5,7 +5,7 @@ import { RegistrySection } from "@/components/registry-section";
 import { AppStores } from "@/registry/buttons/app-stores";
 import { LanguageSwitcher } from "@/registry/buttons/language-switcher";
 import { ThemeSwitcher } from "@/registry/buttons/theme-switcher";
-
+import { Alert } from "@/registry/alert/alert";
 export default function Home() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
@@ -47,6 +47,18 @@ export default function Home() {
               }}
             />
           </div>
+        </RegistrySection>
+
+        <RegistrySection title="Alert" registryName="alert">
+          <Alert
+            text="This is an alert"
+            title="Alert"
+            severity="warning"
+            direction="ltr"
+            classNames={{
+              root: "min-w-96",
+            }}
+          />
         </RegistrySection>
       </main>
     </div>
